@@ -1,0 +1,196 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{ifthen} \usepackage{amsmath} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{polytechnique}
+\usepackage[pdftex=true,
+			colorlinks=true,
+			linkcolor=black,
+			filecolor=red,
+			urlcolor=blue,
+			bookmarks=true,
+			bookmarksopen=true]{hyperref}
+
+
+\title{Réunions PSC 2015-2016}
+\author{Gustavo \textsc{Castro} \\
+		Clément \textsc{Durand} \\
+		Felipe \textsc{Garcia} \\
+		Alexandre \textsc{Harry} \\
+		Francisco \textsc{Ribeiro Eckhardt Serpa} \\
+		Pierre-Alexandre \textsc{Thomas}}
+\subtitle{Comptes-rendus}
+\date{\today}
+
+\begin{document}
+%\pagestyle{} %ou plain, headings, empty
+\maketitle
+\tableofcontents\clearpage
+
+\section{Lundi 31 août 2015}
+
+\subsection{Organisation du PSC}
+Globalement, il a été envisagé d'organiser le PSC en deux grandes étapes.
+\subsubsection{Première étape : hacking}
+Il s'agit de créer une application\footnote{Ou à défaut un dispositif/objet connecté, mais ce n'est pas souhaitable.} destinée à récupérer les données et échanges d'un autre téléphone, le tout \emph{sans contact physique}.
+
+\begin{itemize}
+	\item Trouver le matériel et les logiciels nécessaires\footnote{Limiter la quantité de matériel pour la portabilité.} pour hacker.
+	\item Se renseigner sur le fonctionnement des applications « sécurisées » et leurs éventuelles failles.
+	\item[Objectif :] Intercepter des données \emph{interprétables}.
+\end{itemize}
+
+Pour aller plus loin :
+\begin{itemize}
+	\item Faire une application fonctionnant pour différents modes du téléphone\footnote{Mode avion, Wi-Fi uniquement, Bluetooth, etc.}.
+	\item Envoyer des données à un portable pour les faire exécuter (et donc pouvoir faire n'importe quoi avec un téléphone qui n'est pas suffisamment sécurisé).
+\end{itemize}
+
+\subsubsection{Seconde étape : protection}
+Le but est de protéger le dispositif contre ce type d'attaque\footnote{Et non contre le décryptage. On considère ici qu'une donnée cryptée, c'est une donnée sécurisée \emph{tant qu'on n'a pas intercepté notre clé de cryptage}.}
+
+Cette partie peut s'approcher en deux étapes\footnote{La première étant plus courte que la seconde, et moins fastidieuse.} :
+\begin{enumerate}
+	\item Réaliser une application sécurisée qui remplacerait une application non vraiment sécurisée. Par exemple, \emph{Telegram} a le même rôle que \emph{Viber}, mais \emph{a priori} les échanges y sont sécurisés.
+	\item Réaliser une « application\footnote{Application n'est pas le terme exact, mais il s'agit dans tous les cas d'un bout de code qui est exécuté sur le téléphone.} » qui a pour rôle de sécuriser les autres applications, c'est-à-dire :
+	\begin{itemize}
+		\item De les protéger de l'extérieur (attaques similaires à la notre).
+		\item De les protéger des autres applications (attaques utilisant une application virus).
+	\end{itemize}
+\end{enumerate} 
+
+\subsubsection{Situation dans le temps}
+
+L'objectif est d'avoir \emph{au moins} terminé la partie hacking d'ici la soutenance à mi-parcours. Dans l'idéal, avoir avancé\footnote{Ou même terminé} dans la réalisation de l'application sécurisée serait intéressant.
+
+\subsubsection{Domaine de travail}
+
+A priori, nous travaillerons essentiellement avec android.
+
+\subsection{Devoirs}
+
+\subsubsection{Mail à notre tuteur}
+Un mail a été envoyé à Thomas \textsc{Clausen} pour :
+\begin{itemize}
+	\item Obtenir un rendez-vous pour le Lundi 14 septembre.
+	\item Lui communiquer nos objectifs.
+	\item Obtenir son avis.
+	\item Avoir des informations sur les sources de renseignements possibles et utiles, et sur les étapes à suivre pour progresser correctement.
+	\item Lui transmettre la liste des membres de notre groupe.
+\end{itemize}
+
+\subsubsection{S'instruire}
+
+Pour commencer à programmer pour android : \href{https://openclassrooms.com/courses/creez-des-applications-pour-android/votre-premiere-application-1}{OpenClassrooms} et \href{http://www.tutos-android.com/introduction-programmation-android}{Tutos Android}.
+
+\subsubsection{Se préparer}
+
+Installer les outils utiles :
+\begin{itemize}
+	\item Eclipse
+	\item AndroidStudio
+\end{itemize}
+
+Pour la configuration proxy : il y a le site des \href{https://moodle.polytechnique.fr/mod/page/view.php?id=319}{moodles}.
+
+\subsubsection{Miscellaneous}
+Autres choses envisageables pour se mettre dans le bain :
+\begin{itemize}
+	\item Se renseigner sur le fonctionnement de l'application \emph{Telegram}.
+	\item Regarder la série \emph{Mister Robot}.
+\end{itemize}
+
+\subsection{Échéances}
+
+\begin{description}
+	\item[25 septembre] Proposition détaillée :
+	\begin{itemize}
+		\item Enjeu et motivation, objectif final
+		\item État de l'art (approches concurrentes/alternatives)
+		\item Étapes intermédiaires, échéancier
+		\item Méthodes, organisation, répartition
+		\item Moyens (mobilisables à l'école), achats à prévoir, etc.
+		\item Partenaires (internes comme externes)
+		\item Éventuels résultats préliminaires
+		\item Références bibliographiques
+	\end{itemize}
+	\item[20 novembre] (\emph{au plus tard}) Réunion de lancement
+	\begin{itemize}
+		\item Présentation de la proposition détaillée
+		\item Discussion
+		\item Validation ou recadrage par l'encadrement
+		\item Éventuelles co-supervisions
+	\end{itemize}
+	\item[15 janvier] Rapport intermédiaire :
+	\begin{itemize}
+		\item Résultats intermédiaires
+		\item Point sur nos objectifs/réalisations
+		\item Difficultés/opportunités rencontrées
+		\item Éventuelle révision des objectifs et du programme
+	\end{itemize}
+	\item[22 avril] Rapport final (30 à 40 pages) et page publique
+	\item[2-27 mai] Soutenance finale : 30 minutes de présentation, 20 de questions et discussions
+\end{description}
+
+\subsection{Organisation pratique}
+
+Pour s'organiser : il y a le \href{https://annuel.framapad.org/p/PSC_X2014_CGAFPAFG}{Framapad}.
+
+\section{Lundi 14 septembre 2015}
+
+\subsection{Proposition détaillée}
+
+Il faut produire un plan de la proposition détaillée, pour pouvoir répartir les tâches et avancer dans la rédaction.
+
+Éléments nécessaires pour la proposition détaillée :
+\begin{itemize}
+	\item Enjeux et motivation, objectif final
+	\item État de l'art, approches concurrentes ou alternatives
+	\item Objectifs intermédiaires, échéancier
+	\item Méthode d'organisation
+	\item Identification des moyens (labos, ateliers, achats)
+	\item Contribution de partenaires
+	\item Éventuels résultats préliminaires
+	\item Bibliographie
+	\item 
+\end{itemize}
+
+Idée de plan :
+\begin{enumerate}
+	\item Introduction du sujet
+		\begin{enumerate}
+			\item Enjeux et motivation,
+			\item État de l'art,
+			\item Objectif final
+		\end{enumerate}
+	\item Organisation du projet
+		\begin{enumerate}
+			\item Méthode d'organisation
+			\item Échéancier et objectifs intermédiaires
+		\end{enumerate}
+	\item Moyens à disposition et/ou nécessaires
+		\begin{enumerate}
+			\item Moyens (labos, ateliers, achats)
+			\item Résultats préliminaires
+			\item Bibliographie
+		\end{enumerate}
+\end{enumerate}
+
+Répartition des tâches :
+\begin{enumerate}
+	\item Pierrick Allègre, Felipe Garcia, Alexandre Harry
+	\item Francisco Ribeiro Eckhardt Serpa, Gustavo Castro, Clément Durand
+	\item Guillaume Vizier, Pierre-Alexandre Thomas
+\end{enumerate}
+
+\section{Lundi 5 octobre 2015}
+
+Séance sur les protocoles. Inscription sur GitHub. La semaine prochaine nous travaillerons sur l'utilisation de git et l'émission/réception de paquets.
+
+\end{document}
